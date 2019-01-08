@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<table>
+		<tr>
+           <th>Amount</th>
+           <th>From Currency</th>
+           <th>To Currency</th>
+           <th></th>
+       </tr>
+       <tr>
+			<th><input type="text" id="money" /></th>
+			<th><select id="FromCurrency">
+				<option value="23000">VietNam</option>
+				<option value="1">USD</option>
+			</select></th>
+
+			<th><select id="ToCurrency">
+				<option value="1">USD</option>
+				<option value="23000">VietNam</option>
+				</select></th>
+			<th> <button onclick = "convert();">convert </button></th>
+		</tr>
+		</table>
+		<h1 id="ketqua"></h1>
+   <script>
+   function convert() {
+       var s= parseInt(document.getElementById("money").value);
+       var tigia = document.getElementById("ToCurrency").value/document.getElementById("FromCurrency").value;
+       var tien =s*tigia;
+       document.write("Số tiền = " + tien);
+   }
+</script>
+
+
+
+
+ 
+	
+</body>
+</html>
